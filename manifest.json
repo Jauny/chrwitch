@@ -1,0 +1,10 @@
+{
+  "name": "Twitch Chrome Extension",
+  "version": "1.0",
+  "description": "Find all the streams directly through Chrome",
+
+  "browser_action": {
+    "default_icon": "incon.png",
+    "popup": "popup.html"
+  }
+}

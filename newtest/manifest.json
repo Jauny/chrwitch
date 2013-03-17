@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
 
-  "name": "Twitch Streams List",
-  "description": "Find all the streams directly through Chrome",
+  "name": "Chrome twitch",
+  "description": "All the top streams from Twitch, directly from Chrome!",
   "version": "1.0",
 
   "permissions": [
-    "https://api.twitch.tv/kraken/streams?limit=20"
+    "https://api.twitch.tv/"
   ],
   "browser_action": {
     "default_icon": "icon.png",

@@ -1,7 +1,7 @@
 var streamGenerator = {
 
-  /* Twitch URL to the top 20 streams */
-  searchOnTwitch_: 'https://api.twitch.tv/kraken/streams?limit=20',
+  /* Twitch URL to the top 50 streams */
+  searchOnTwitch_: 'https://api.twitch.tv/kraken/streams?limit=50',
 
   /* XHR Request to grab those streams */
   requestStreams: function() {
@@ -26,7 +26,7 @@ var streamGenerator = {
       $('tbody').append('<tr>'
         + '<td>' + stream.game + '</td>'
         + '<td>' + '<a href=' + stream.link + '>' + stream.name + '</a></td>'
-        + '<td>' + stream.viewers + '</td></a>'
+        + '<td align="right">' + stream.viewers + '</td></a>'
       );
     }
   }

@@ -1,5 +1,5 @@
 $(function() {
-  $('a').click(function(){
-    chrome.tabs.create({url: $(this).attr('href')});
-  });
+  $(document).on('click', 'a', function() {
+    chrome.tabs.create({url: this.href});
+  })
 })

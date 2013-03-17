@@ -14,20 +14,20 @@ var streamGenerator = {
   /* onload event inserting the streams into the DOM */
   showStreams_: function(e) {
     var streams = JSON.parse(e.target.responseText).streams;
-    console.log(streams);
-
 
     for (var i=0; i < streams.length; i++) {
       var stream = {
         game: streams[i].game,
         name: streams[i].channel.name,
         viewers: streams[i].viewers,
+        link: streams[i].channel.url,
       };
 
       $('tbody').append('<tr>'
         + '<td>' + stream.game + '</td>'
-        + '<td>' + stream.name + '</td>'
-        + '<td>' + stream.viewers + '</td>');
+        + '<td>' + '<a href=' + stream.link + '>' + stream.name + '</a></td>'
+        + '<td>' + stream.viewers + '</td></a>'
+      );
     }
   }
 };
